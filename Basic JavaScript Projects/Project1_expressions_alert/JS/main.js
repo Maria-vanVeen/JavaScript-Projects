@@ -1,7 +1,8 @@
 
 //VARIABLES
 var str1 = "This is the first sting. ", str2 = "This is the second string. ", str1 = str1.fontcolor("blue");
-window.alert(6 / 2);
+
+//window.alert(6 / 2);
 
 document.write(str1 + str2);
 
@@ -10,4 +11,10 @@ function greenFunction() {
   var str = "Now it is GREEN";
   var result = str.fontcolor("green");
   document.getElementById("greenText").innerHTML = result;
+}
+
+function askName() {
+  var str ="please enter your name"
+  //window.alert(str);
+  document.getElementById("name").placeholder = str; 
 }
