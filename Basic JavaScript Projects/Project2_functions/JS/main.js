@@ -16,3 +16,11 @@ function count_to_3() {
   //alert(123);
   document.getElementById("count").innerHTML = str;
 }
+
+function calcFinalGrade(gr1, gr2, this_id) {
+  //alert("calc");
+  result = (gr1 + gr2 ) / 2;
+  document.getElementById(this_id).innerHTML = result;
+
+}
+

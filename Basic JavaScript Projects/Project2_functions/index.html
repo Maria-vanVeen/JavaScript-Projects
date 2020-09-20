@@ -12,5 +12,38 @@
   <p id="ipsum">empty</p>
   <br>
   <p id="count" onclick="count_to_3()" >Count</p> <!--function will populate this paragraph with one two three-->
+  <br>
+  <h1>Test scores</h1>
+  <table>
+    <colgroup>
+        <col span="1" class="class-names">
+        <col span="2" class="exams">
+        <col span="1" class="final">
+    </colgroup>
+    <tr>
+        <th>Class</th>
+        <th>Mid-term</th>
+        <th>Final Exam</th>
+        <th>Final Grade</th>
+    </tr>
+    <tr>
+        <td>English</td>
+        <td>95</td>
+        <td>100</td>
+        <td onclick="calcFinalGrade(95,100, 'row1')" id="row1"></td>
+    </tr>
+    <tr>
+        <td>Math</td>
+        <td>90</td>
+        <td>95</td>
+        <td onclick="calcFinalGrade(90,95, 'row2')" id="row2"></td>
+    </tr>
+    <tr>
+        <td>Science</td>
+        <td>80</td>
+        <td>85</td>
+        <td onclick="calcFinalGrade(80,85, 'row3')" id="row3"></td>
+    </tr>
+</table>
 </body>
 </html>
