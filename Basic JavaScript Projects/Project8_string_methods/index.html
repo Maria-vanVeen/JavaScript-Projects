@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charSet="UTF-8">
+    <script src="JS/main.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <h2>Concatenate</h2>
+    <input type="text" id="text_1" placeholder="your text here"><br>
+    <input type="text" id="text_2" placeholder="your text here"><br>
+    <input type="text" id="text_3" placeholder="your text here"><br>
+    <input type="text" id="text_4" placeholder="your text here"><br>
+    <p id="text_combined" onclick="combined_sentence()">
+      fill in the fields above, then click here!
+    </p>
+    <h2>Slice</h2>
+    <input type="text" id="text_5" placeholder="at least 5 characters">
+    <p id="sliced_text" onclick="slice()">click here</p>
+    <h2>to uppercase</h2>
+    <input type="text" id="text_6">
+    <p id="uppercase_text" onclick="uppercase()">click here</p>
+    <h2>Search()</h2>
+    <p id="search_text">The fox jumps over the lazy dog</p>
+    <label>search for the following text in the paragraph above</label>
+    <input type="text" id="text_7">
+    <p id="text_found" onclick="find()">click here</p>
+    <h2>toString()</h2>
+    <input type="number" id="number">
+    <p id="converted" onclick="convert_to_number()">convert</p>
+    <h2>toPrecision()</h2>
+    <input type="number" id="number_2">
+    <p id="converted_2" onclick="set_precision()">convert</p>
+  </body>
+</html>
