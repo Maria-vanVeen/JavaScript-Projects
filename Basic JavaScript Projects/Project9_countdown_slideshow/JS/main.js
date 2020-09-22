@@ -1,14 +1,18 @@
 var slideIndex = 0;
+var timer;
 showSlides();
 
 //NEXT PREVIOUS CONTROLS
 function plusSlides(n) {
-  slideIndex += n;
+  clearTimeout(timer);
+  slideIndex -= 1; //undo the automatic increment of showSlides()
+  slideIndex += n; //apply next or previous to slideIndex
   showSlides();
 }
 
 //DOT CONTROLS
 function currentSlide(n) {
+  clearTimeout(timer);
   slideIndex = n;
   showSlides();
 }
@@ -27,5 +31,5 @@ function showSlides() {
   slides[slideIndex].style.display = "block";
   dots[slideIndex].className += " active";
   slideIndex++;
-  setTimeout(showSlides, 2000);
+  timer = setTimeout(showSlides, 4000);
 }
