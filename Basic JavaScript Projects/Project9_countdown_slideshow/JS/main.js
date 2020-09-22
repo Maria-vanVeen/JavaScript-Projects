@@ -1,21 +1,23 @@
 var slideIndex = 0;
-showSlides(slideIndex);
+showSlides();
 
 //NEXT PREVIOUS CONTROLS
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  slideIndex += n;
+  showSlides();
 }
 
 //DOT CONTROLS
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  slideIndex = n;
+  showSlides();
 }
 
-function showSlides(n) {
+function showSlides() {
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
-  if (n >= slides.length) {slideIndex = 0;} // wrap around on the right
-  if (n < 0) {slideIndex = slides.length - 1;} // wrap around on the left
+  if (slideIndex >= slides.length) {slideIndex = 0;} // wrap around on the right
+  if (slideIndex < 0) {slideIndex = slides.length - 1;} // wrap around on the left
   for (var i = 0; i < slides.length; i++) { // reset display to none for all mySlides
     slides[i].style.display = "none";
   }
