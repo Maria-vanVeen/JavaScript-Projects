@@ -4,11 +4,13 @@
 
 img {
   vertical-align: middle;
+  width: 100%;
+  border: 2px solid black;
 }
 
 /* SLIDESHOW CONTAINER */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 500px;
   position: relative;
   margin: auto;
 }
@@ -32,7 +34,6 @@ img {
   transition: 0.6s ease;
   border-radius: 0 8px 8px 0;
   user-select: none; /* text cannot be selected*/
-  background-color: lightblue;/* REMOVE ONCE PICTURES ARE SHOWN*/
 }
 
 /* position the next button to the rigth*/
@@ -43,16 +44,37 @@ img {
 
 /* on hover add background*/
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.3);
 }
 
 /*CAPTION AND NUMBER TEXT*/
-
 /* Caption Text */
+.captionText {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
 
 /* Number text */
+.numberText {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0px;
+}
 
 /* DOTS SELECTORS/INDICATORS */
+.dots-container {
+  text-align: center;
+}
+
 .dot {
   cursor: pointer;
   height: 15px;
@@ -69,3 +91,12 @@ img {
 }
 
 /* FADING ANIMATION */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 1;}
+}

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charSet = "UTF-8">
-    <script src="JS/main.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="CSS/main.css">
     <title>Countdown Slideshow</title>
   </head>
@@ -12,26 +12,26 @@
 
       <!-- IMAGES WITH NUMBER AND CAPTION TEXT -->
       <div class="mySlides fade">
-        <div class="numberText">x</div>
-        <img src="Images/111224_1.jpg" alt="" style="width:100%">
+        <div class="numberText">1/4</div>
+        <img src="Images/111224_1.jpg" alt="">
         <div class="captionText">Caption</div>
       </div>
 
       <div class="mySlides fade">
-        <div class="numberText">x</div>
-        <img src="Images/122284_2.jpg" alt="" style="width:100%">
+        <div class="numberText">2/4</div>
+        <img src="Images/122284_2.jpg" alt="">
         <div class="captionText">Caption</div>
       </div>
         
       <div class="mySlides fade">
-        <div class="numberText">x</div>
-        <img src="Images/140351.jpg" alt="" style="width:100%">
+        <div class="numberText">3/4</div>
+        <img src="Images/140351.jpg" alt="">
         <div class="captionText">Caption</div>
       </div>
         
       <div class="mySlides fade">
-        <div class="numberText">x</div>
-        <img src="Images/154702_1.jpg" alt="" style="width:100%">
+        <div class="numberText">4/4</div>
+        <img src="Images/154702_1.jpg" alt="">
         <div class="captionText">Caption</div>        
       </div>
 
@@ -41,12 +41,14 @@
     </div>
 
     <!-- DOTS -->
+    <br>
     <div class="dots-container">
+      <span class="dot" onclick="currentSlide(0)"></span>
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
-      <span class="dot" onclick="currentSlide(4)"></span>
     </div>
+    <script src="JS/main.js"></script>
   </body>
 </html>
 
