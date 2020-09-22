@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* SLIDESHOW CONTAINER */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* HIDE IMAGES BY DEFAULT */
+.mySlides {
+  display: none;
+}
+
+/* NEXT AND PREVIOUS BUTTONS */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: 0px; /* -22px in sample code */
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 8px 8px 0;
+  user-select: none; /* text cannot be selected*/
+  background-color: lightblue;/* REMOVE ONCE PICTURES ARE SHOWN*/
+}
+
+/* position the next button to the rigth*/
+.next {
+  right: 0;
+  border-radius: 8px 0 0 8px;
+}
+
+/* on hover add background*/
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+
+/*CAPTION AND NUMBER TEXT*/
+
+/* Caption Text */
+
+/* Number text */
+
+/* DOTS SELECTORS/INDICATORS */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* FADING ANIMATION */
