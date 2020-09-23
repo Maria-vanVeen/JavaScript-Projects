@@ -5,7 +5,7 @@ showSlides();
 //NEXT PREVIOUS CONTROLS
 function plusSlides(n) {
   clearTimeout(timer);
-  slideIndex -= 1; //undo the automatic increment of showSlides()
+  slideIndex -= 1; //undo the automatic increment of showSlides() Delete this if you take the timer out
   slideIndex += n; //apply next or previous to slideIndex
   showSlides();
 }
