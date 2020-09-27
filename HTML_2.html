@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="CSS/CSS_2.css">
+  <script src="JavaScript/JavaScript_2.js" defer></script>
+  <title>Contact Form with validation</title>
+</head>
+<body>
+  <h2>Contact form with validation</h2>
+  <div class="form-container">
+    <form action="" method="GET" id="contactForm" onsubmit="return validateForm()" >
+      <label>Name: </label><input type="text" name="name" placeholder="name" >
+      <label>City: </label><input type="text" name="city" list="citylist" placeholder="city" >
+      <datalist id="citylist">
+        <option value="Amsterdam">
+        <option value="Boston">
+        <option value="Cambridge">
+      </datalist>
+      <label>Country: </label><select name="country">
+        <option value="select" selected disabled>please select</option>
+        <option value="Canada">Canada</option>
+        <option value="Germany">Germany</option>
+        <option value="Italy">Italy</option>
+        <option value="Netherlands">The Netherlands</option>
+        <option value="USA">USA</option>
+      </select>
+      <label>Start date: </label><input type="date" name="date">
+      <label>Message: </label><textarea placeholder="Please write your message here." ></textarea>
+      <input type="submit">
+    </form>
+  </div>
+  
+</body>
+</html>

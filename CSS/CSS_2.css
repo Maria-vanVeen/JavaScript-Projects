@@ -1,0 +1,32 @@
+body {
+  color: darkgreen;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  border-radius: 8px;
+  padding: 20px;
+  font-family: "Trebuchet MS", Optima;
+  background-color: darkgreen;
+  color: white;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  border: none;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+textarea {
+  resize: vertical;
+}
