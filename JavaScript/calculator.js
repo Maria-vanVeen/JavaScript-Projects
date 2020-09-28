@@ -36,11 +36,11 @@ function handle_operator(next_operator) {
   if (first_operand == null) {
     CALCULATOR.first_operand = value_of_input;
   } else if(operator) { 
-    const value_now = first_operand || 0; //WE ALREADY KNOW THAT THE FIRST OPERAND IS NOT NULL SO WHY DO WE NEED THE '|| 0' PART?
+    const value_now = first_operand || 0; //'|| 0' added just in case first_operand is NaN.
     let result = perform_calculation[operator] (value_now, value_of_input);
     result = Number(result).toFixed(9); //sometimes result can be a string so we need to convert to number.
     result = (result*1).toString();//this gets rid of trailing zeroes.
-    CALCULATOR.display_value = result; //WHY DOES THE SAMPLE CODE HAVE 'parseFloat(result)' HERE? ISN'T display_value A STRING?
+    CALCULATOR.display_value = result; //'parseFloat(result)' to make sure nothing but the number gets displayed (precaution)
     CALCULATOR.first_operand = parseFloat(result);
     console.log(CALCULATOR);
   }
