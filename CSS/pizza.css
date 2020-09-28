@@ -1,0 +1,76 @@
+body {
+  background-color: wheat;
+}
+
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: brown;
+  text-align: center;
+}
+
+h3 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: darkred;
+}
+
+div {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: brown;
+}
+
+#menuBG {
+  width: 600px;
+  height: 470px;
+  margin: 10px auto;
+}
+
+#frmMenu {
+  width: 600px;
+  height: 200px;
+}
+
+.left {
+  width: 200px;
+  height: 200px;
+  float: left;
+}
+
+.center {
+  width: 200px;
+  height: 200px;
+  float: left;
+}
+
+.right {
+  width: 200px;
+  height: 200px;
+  float: right;
+}
+
+#cart {
+  top: 0;
+  margin: 0 auto;
+  width: 400px;
+  height: 200px;   
+}
+
+#showText {
+  width: 200px;
+  height: 190px;
+  margin: 0 auto;
+  float: left;
+}
+
+#totalPrice {
+  width: 200px;
+  height: 190px;
+  margin: 0 auto;
+  float: right;
+}
+
+#btnOrder {
+  margin: 25px auto;
+  width: 100px;
+  height: 40px;
+  display: block;
+}
