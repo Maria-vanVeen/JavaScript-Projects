@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <title>Document</title>
+</head>
+<script>
+  $(document).ready(function() {
+    $("html").append(
+      "<body>\
+        <div id='container'>\
+          <div id='inner'>\
+            <h1>Basic jQuery</h1>\
+            <p id='1'>Paragraph 1</p>\
+            <p id='2'>Paragraph 2</p>\
+            <p id='3'>Paragraph 3</p>\
+          </div>\
+        </div>\
+      </body>"
+    );
+    $("#2").css({"color": "red"});
+    $("#3").click(function () {
+      $("h1").hide();
+    });
+    $("#1").hover(
+      function () { //on mouse in show teaser
+        // only if the secret text is not displayed, will it display the teaser
+        if (!$("#secret").length) {$(this).append("<span id='click'><br>Click to reveal the hidden text</span>");}
+      },
+      function () { //on mouse out remove teaser
+        $("#click").remove();
+      }
+    );
+    $("#1").one("click", secretText);
+    function secretText () { // show secret text (only the first time you click on this paragraph)
+      $(this).append("<span id='secret'><br>This is the most secret text. You will only see this once.</span>");
+      $("#click").remove();
+      alert("When you have read the text, click it to hide it."); 
+      $("#1").one("click", hideSecret);
+      function hideSecret () {  // remove secret text (only the second time you click on this paragraph)
+        $("#secret").remove();
+        $("#1").click(function () {  //set behavior for future clicks
+          alert("You have already seen the secret text");
+        });
+      }
+        
+    }
+  })
+</script>
+
+</body>
+</html>
