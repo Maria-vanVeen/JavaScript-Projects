@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="XML_example"></p>
+    <p id="XML_example_2"></p>
+    <script>
+      var XML_parser, XML_document;
+
+      //creates a text string
+      var movie = "<movie>" +
+        "<title>Schindler\'s List</title>" +
+        "<director>Steven Spielberg</director>" +
+        "<starring>Liam Neeson</starring>" +
+        "<year>1993</year>" +
+        "</movie>";
+      
+      // creates an XML DOM Parser
+      XML_parser = new DOMParser();
+
+      //creates a new XML DOM object using the text string
+      XML_movie = XML_parser.parseFromString(movie, "text/xml");
+
+      document.getElementById("XML_example").innerHTML = XML_movie.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+      
+      var pets = "<pets>" +
+          "<pet>" +
+            "<species>Cat</species>" +
+            "<name>Kitty</name>" +
+            "<age>4</age>" +
+            "<color>Orange</color>" +
+          "</pet>" +  
+          "<pet>" +
+            "<species>Red-eared Slider</species>" +
+            "<name>Speedy</name>" +
+            "<age>8</age>" +
+            "<color>Green</color>" +
+          "</pet>" +  
+        "</pets>"  
+      XML_pets = XML_parser.parseFromString(pets, "text/xml");
+
+      document.getElementById("XML_example_2").innerHTML = XML_pets.getElementsByTagName("name")[1].childNodes[0].nodeValue;
+    </script>
+  </body>
+</html>
