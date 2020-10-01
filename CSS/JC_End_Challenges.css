@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+.popup_form {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 15px;
+  border: 2px solid green;
+  z-index: 9;
+}
+
+.formContainer {
+  width: 300px;
+  padding: 10px;
+}
+
+.formContainer input,
+.formContainer textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+}
+
+.formContainer input:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.btn {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 5px 0;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.formContainer .cancel {
+  background-color: red;
+}
+
+.animationFrame {
+  width: 254px;
+  height: 254px;
+  border: 2px solid black;
+}
+.animated {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: red;
+  position: relative;
+  top: 100px;
+  animation: bounceBall 5s;
+}
+
+@keyframes bounceBall {
+  0%    {top: 100px; left: 0px; background-color: red;}
+  25%   {top: 0; left: 100px; background-color: yellow;}
+  50%   {top: 100px; left: 200px; background-color: blue;}
+  75%   {top: 200px; left: 100px; background-color: magenta;}
+  100%  {top: 100px; left: 0px; background-color: red;}
+  
+}
+
+.s {
+  /*position: fixed;*/
+  width: 100%;
+  height: 210px;
+}
+
+.zoomContainer {
+  display: block;
+  margin: auto;
+  height:  200px;
+  width: 200px;
+  overflow: hidden;
+}
+.zoom {
+  display: block;
+  margin: auto;
+  animation: zoom 5s;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+@keyframes zoom {
+  0% {transform: scale(1);}
+  50% {transform: scale(2);}
+  100% {transform: scale(1);}
+}
+
+hr {
+  border-bottom: 2px solid red;
+  border-top: 15px solid green;
+  height: 30px;
+}
+
+#slideshow {
+  margin: 50px auto;
+  position: relative;
+  width: 240px;
+  height:  240px;
+  padding: 0px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  object-fit: cover;
+}
+
+#slideshow > div {
+  position: absolute;
+  margin: 10px;
+  width: 220px;
+  height: 220px;
+  padding: 0;
+}
+
+#slideshow > div > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+button.sticky {
+  position: sticky;
+  bottom: 10px;
+
+}
